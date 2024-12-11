@@ -9,11 +9,8 @@ def footer_items_1() -> rx.Component:
         rx.heading(
             "PRODUCTS", size="4", weight="bold", as_="h3"
         ),
-        footer_item("Web Design", "/#"),
-        footer_item("Web Development", "/#"),
-        footer_item("E-commerce", "/#"),
-        footer_item("Content Management", "/#"),
-        footer_item("Mobile Apps", "/#"),
+        footer_item("Link", "/#"),
+        footer_item("Link", "/#"),
         spacing="4",
         text_align=["center", "center", "start"],
         flex_direction="column",
@@ -25,11 +22,8 @@ def footer_items_2() -> rx.Component:
         rx.heading(
             "RESOURCES", size="4", weight="bold", as_="h3"
         ),
-        footer_item("Blog", "/#"),
-        footer_item("Case Studies", "/#"),
-        footer_item("Whitepapers", "/#"),
-        footer_item("Webinars", "/#"),
-        footer_item("E-books", "/#"),
+        footer_item("Link", "/#"),
+        footer_item("Link", "/#"),
         spacing="4",
         text_align=["center", "center", "start"],
         flex_direction="column",
@@ -43,8 +37,6 @@ def social_link(icon: str, href: str) -> rx.Component:
 def socials() -> rx.Component:
     return rx.flex(
         social_link("instagram", "/#"),
-        social_link("twitter", "/#"),
-        social_link("facebook", "/#"),
         social_link("linkedin", "/#"),
         spacing="3",
         justify="end",
@@ -58,21 +50,15 @@ def base_footer() -> rx.Component:
             rx.flex(
                 rx.vstack(
                     rx.hstack(
-                        rx.image(
-                            src="/logo.jpg",
-                            width="2.25em",
-                            height="auto",
-                            border_radius="25%",
-                        ),
                         rx.heading(
-                            "Reflex",
+                            "Pluto",
                             size="7",
                             weight="bold",
                         ),
                         align_items="center",
                     ),
                     rx.text(
-                        "© 2024 Reflex, Inc",
+                        "© 2025 Pluto, Inc",
                         size="3",
                         white_space="nowrap",
                         weight="medium",

@@ -13,20 +13,14 @@ def base_navbar() -> rx.Component:
         rx.desktop_only(
             rx.hstack(
                 rx.hstack(
-                    rx.image(
-                        src="/logo.jpg",
-                        width="2.25em",
-                        height="auto",
-                        border_radius="25%",
-                    ),
                     rx.heading(
-                        "pluto", size="7", weight="bold"
+                        "Pluto", size="7", weight="bold"
                     ),
                     align_items="center",
                 ),
                 rx.hstack(
                     navbar_link("Home", "/"),
-                    navbar_link("About", "/about"),
+                    navbar_link("Chat", navigation.routes.CHAT_ROUTE),
                     justify="end",
                     spacing="5",
                 ),
@@ -37,14 +31,8 @@ def base_navbar() -> rx.Component:
         rx.mobile_and_tablet(
             rx.hstack(
                 rx.hstack(
-                    rx.image(
-                        src="/logo.jpg",
-                        width="2em",
-                        height="auto",
-                        border_radius="25%",
-                    ),
                     rx.heading(
-                        "neutron", size="6", weight="bold"
+                        "Pluto", size="7", weight="bold"
                     ),
                     align_items="center",
                 ),
@@ -54,7 +42,7 @@ def base_navbar() -> rx.Component:
                     ),
                     rx.menu.content(
                         rx.menu.item("Home", on_click=navigation.state.NavState.to_home),
-                        rx.menu.item("About",on_click=navigation.state.NavState.to_about),
+                        rx.menu.item("Chat",on_click=navigation.state.NavState.to_chat)
                     ),
                     justify="end",
                 ),

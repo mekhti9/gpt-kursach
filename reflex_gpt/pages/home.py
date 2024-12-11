@@ -11,22 +11,18 @@ def home_page() -> rx.Component:
     # Welcome Page (Index)
     return ui.base_layout(
         rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
+            rx.heading("Chat Pluto", size="9"),
             rx.text(
-                "Get started by editing bleb;eblu ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
+                "Ask about anything",
                 size="5",
             ),
             rx.link(
-                rx.button("Check out our docs!"),
-                href="https://reflex.dev/docs/getting-started/introduction/",
+                rx.button("Start Chat", on_click=navigation.state.NavState.to_chat),
                 is_external=True,
             ),
-            rx.box("Go to about timeless", on_click=navigation.state.NavState.to_about),
             spacing="5",
             justify="center",
             min_height="85vh",
         ),
-        rx.logo(),
     )
 
