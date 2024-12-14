@@ -29,7 +29,11 @@ def message_box(chat_message: ChatMessage) -> rx.Component:
 def chat_page():
     return ui.base_layout(
         rx.vstack(
+            rx.hstack(
             rx.heading("chat", size="9"),
+            rx.cond(ChatState.not_found, "not found", "found"),
+            rx.button("start New Chat", on_click=ChatState.create_new_and_redirect)
+            ),
             rx.box(
                 rx.foreach(ChatState.messages, message_box),
                 width = '100%'
